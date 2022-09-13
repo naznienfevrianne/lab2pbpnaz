@@ -1,5 +1,5 @@
 ## Link Aplikasi Heroku
-https://tugas2pbpnaz.herokuapp.com/
+https://tugas2pbpnaz.herokuapp.com/katalog/
 
 ## Bagan request client ke aplikasi Django dan responnya
 
