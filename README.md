@@ -2,7 +2,7 @@
 https://tugas2pbpnaz.herokuapp.com/katalog/
 
 ## Bagan request client ke aplikasi Django dan responnya
-Bagan: https://drive.google.com/file/d/1KfOOaV5MN1YpRuhcN1V-h5ZLsIzsRilM/view?usp=sharing
+Bagan: https://drive.google.com/file/d/1Mq4rmP8rBd8kZGAUfaUVMxpldqBoHlL1/view?usp=sharing
 Ketika terjadi HTTP request, urls.py akan memetakan (routing) request terhadap views yang bersesuaian. views.py akan mengakses models.py untuk mengambil data-data berisi instance objek dan merender template html yang akan ditampilkan di web page.
 
 ## Mengapa menggunakan virtual environment?
