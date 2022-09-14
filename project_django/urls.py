@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# starting point routing
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('katalog/',  include('katalog.urls')),
