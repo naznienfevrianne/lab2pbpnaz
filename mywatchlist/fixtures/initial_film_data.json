@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.filmitem",
+        "pk":1,
+        "fields": {
+            "watched": "Yes",
+            "title" : "The Shawshank Redemption",
+            "rating": 5,
+            "release_date": "22 September 1994",
+            "review": "Tough, complex story with clarity, compassion and considerable dramatic force. Beautiful screenplay and good-hearted story."
+        }
+    },
+    {
+        "model": "mywatchlist.filmitem",
+        "pk":2,
+        "fields": {
+            "watched": "Yes",
+            "title" : "The Godfather",
+            "rating": 5,
+            "release_date": "24 Maret 1972",
+            "review": "Beautifully crafted gangster film. A character study, amazing period piece and outstanding family portrait."
+        }
+    },
+    {
+        "model": "mywatchlist.filmitem",
+        "pk":3,
+        "fields": {
+            "watched": "Yes",
+            "title" : "All The President's Name",
+            "rating": 4,
+            "release_date": "5 April 1976",
+            "review": "Mesmerizing perfomance by both Dustin Hoffman and Robert Redford."
+        }
+    },
+    {
+        "model": "mywatchlist.filmitem",
+        "pk":4,
+        "fields": {
+            "watched": "No",
+            "title" : "Casablanca",
+            "rating": 5,
+            "release_date": "23 Januari 1943",
+            "review": "Hollywood classic."
+        }
+    },
+    {
+        "model": "mywatchlist.filmitem",
+        "pk":5,
+        "fields": {
+            "watched": "Yes",
+            "title" : "To Kill a Mockingbird",
+            "rating": 5,
+            "release_date": "25 Desember 1962",
+            "review": "Best adaptation of a novel that Hollywood has ever produced."
+        }
+    },
+    {
+        "model": "mywatchlist.filmitem",
+        "pk":6,
+        "fields": {
+            "watched": "No",
+            "title" : "Rear Window",
+            "rating": 5,
+            "release_date": "4 Agustus 1954",
+            "review": "One of the Hitchcock masterpiece. It has tension, suspense, humour and the story moves along at a good pace."
+        }
+    },
+    {
+        "model": "mywatchlist.filmitem",
+        "pk":7,
+        "fields": {
+            "watched": "Yes",
+            "title" : "Broker",
+            "rating": 3,
+            "release_date": "16 Juni 2022",
+            "review": "Slow-burn, heart-warming, new-found family story. Excellent performance from Song Kang Ho."
+        }
+    },
+    {
+        "model": "mywatchlist.filmitem",
+        "pk":8,
+        "fields": {
+            "watched": "Yes",
+            "title" : "Goodfellas",
+            "rating": 5,
+            "release_date": "19 September 1990",
+            "review": "One of the most iconic movies in the 90s. Priceless."
+        }
+    },
+    {
+        "model": "mywatchlist.filmitem",
+        "pk":9,
+        "fields": {
+            "watched": "No",
+            "title" : "Apocalypes Now",
+            "rating": 4,
+            "release_date": "15 Agustus 1979",
+            "review": "A disturbing film, but a poignant character study and a brilliant depiction of the horrors of the Vietnam War."
+        }
+    },
+    {
+        "model": "mywatchlist.filmitem",
+        "pk":10,
+        "fields": {
+            "watched": "Yes",
+            "title" : "Chungking Express",
+            "rating": 4,
+            "release_date": "14 Juli 1994",
+            "review": "Chungking Express is a breezy little Hong Kong movie that has more life, energy, humanity and sheer visual zing than most other shows you'll see in a month or so."
+        }
+    }
+]
