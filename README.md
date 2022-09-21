@@ -1,3 +1,4 @@
+README Tugas 2
 ## Link Aplikasi Heroku
 https://tugas2pbpnaz.herokuapp.com/katalog/
 
