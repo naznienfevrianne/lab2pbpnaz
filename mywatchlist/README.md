@@ -6,9 +6,9 @@ XML: https://tugas2pbpnaz.herokuapp.com/mywatchlist/xml/
 1. Perbedaan JSON XML HTML
 JSON adalah bagian dari syntax JavaScript untuk merepresentasikan sebuah objek, sementara XML merupakan markup language seperti HTML yang menggunakan tag structure untuk merepresentasikan item data. 
 Sementara itu, walaupun HTML dan XML memiliki struktur yang serupa, HTML lebih sering digunakan untuk menampilkan data dan XML lebih sering diguunakan untuk menyimpan data. 
-HTML juga tidak membawa data, HTML hanya menampilkannya, sementara itu XML membawa data ke/dari database. 
+HTML juga tidak membawa data, HTML hanya menampilkannya, sementara JSON dan XML membawa data ke/dari database. 
 2. Mengapa data delivery diperlukan dalam mengimplementasikan sebuah platform
-Data delivery diimplementasikan dalam platform untuk menampilkan sebuah data dalam format yang berbeda-beda. Misal database di JSON ingin ditampilkan di website dalam format CSS, HTML maupun XML, maka data delivery dibutuhkan dalam implementasi tersebut. 
+Data delivery diimplementasikan dalam platform untuk menampilkan sebuah data dalam format yang berbeda-beda. Misal database di JSON ingin ditampilkan di website dalam format CSS, HTML maupun XML tanpa membuat file data format CSS, HTML maupun XML terlebih dahulu, maka data delivery dibutuhkan dalam implementasi tersebut. 
 3. Bagaimana mengimplementasikan checklist di atas
 - Membuat aplikasi baru bernama mywatchlist di proyek django tugas 2
 Menjalankan cmd python manage.py startapp mywatchlist, menambahkan 'mywatchlist' di INSTALLED_APPS pada settings.py di folder project_django
