@@ -26,8 +26,8 @@ Menambahkan path json/ di urls.py pada folder mywatchlist parameter fungsi di vi
 Makemigrations, migrate dan loaddata di cmd. Kemudian melakukan git add, git commit dan git push. Jika deployment berhasil 
 3. POSTMAN
 HTML
-https://drive.google.com/file/d/1mEpeqqg5Q1JomubE-tb2NqPrx7hW5TqX/view?usp=sharing
+https://drive.google.com/file/d/1ZK8ipcUFiF9NOqO3Xp42W6E4SrSQHJic/view?usp=sharing
 JSON
-https://drive.google.com/file/d/1w9CpEhdcfA6_aLRWdmKcdKMBK7MtcPTG/view?usp=sharing
+https://drive.google.com/file/d/1s-cfNtFVWjlVVCP8i9qO772wP8xUynMo/view?usp=sharing
 XML
-https://drive.google.com/file/d/1NPIBUd4LwgkEygKz5eCUbfFwwpUOrE_n/view?usp=sharing
+https://drive.google.com/file/d/1H_n8dA8DIn0GU5XrvhS_4t6X-AgXzg1r/view?usp=sharing
