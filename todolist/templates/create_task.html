@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Creating Task</title>
+{% endblock meta %}
+
+{% block content %}  
+
+<div class = "cre1ate_task">
+    
+    <h1>Creation Task Form</h1>  
+
+        <form action="{% url 'todolist:create-task' %}" method="post" enctype="multitype/form-task">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">     
+        </form>
+
+
+    {% if messages %}  
+        <ul>   
+            {% for message in messages %}  
+                <li>{{ message }}</li>  
+                {% endfor %}  
+        </ul>   
+    {% endif %}
+    <button><a href="{% url 'todolist:show_todolist' %}">Back</button>
+</div>  
+
+{% endblock content %}
