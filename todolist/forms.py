@@ -6,7 +6,7 @@ from django.utils.timezone import now
 class TaskForm(ModelForm):
     title  = forms.CharField(max_length=100)
     description = forms.CharField(max_length=1000)
-    date = datetime.datetime.today().date()
+    date = datetime.date.today()
 
     class Meta:
         model = TaskToDoList
