@@ -1,29 +1,133 @@
 {% extends 'base.html' %}
-
 {% block content %}
-<h2>To-Do List</h2>
-<h5>Username:</h5>
-<p> {{user}} </p>
-<table>
-    <tr>
-    <th>Creation Date</th>
-    <th>Title</th>
-    <th>Description</th>
-    </tr>
-    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
-    {% for task in list_task %}
-        {% if user == task.user %}
-        <tr>
-            <th>{{task.date}}</th>
-            <th>{{task.title}}</th>
-            <th>{{task.description}}</th>
-        </tr>
-        {% endif %}
-    {% endfor %}
-</table>
+<style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+    .cards {
+      display: block;
+      float: left;
+      width: 25%;
+      text-align: center;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin: 0px 0px 0px 0px;
+      right: 10px;
+      padding-bottom:20px;
+      padding-left: 30px;
+      
+    }
+    .card:hover {
+      background-color: #DCE4FF;
+    }
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+      text-align: center;
+      background-color: #f1f1f1;
+      float: left;
+      width: 1%;
+      margin: auto;
+      margin: 0px 0px 0px 0px;
+      padding-bottom: 10px;
+    }
+    .col {
+      padding-left:55px;
+      padding-right:55px; 
+    }
+    .row {
+      margin: 0 -5px;
+      float:flex;
+    }
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .h5 {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-image: url(https://i.pinimg.com/564x/ff/8a/e8/ff8ae82cff9dc60a559a874fba081ce5.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      font-family: Calibri;
+    }
+
+    /* Use a media query to add a breakpoint at 800px: */
+    @media screen and (max-width: 1134px) {
+       body {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+      }
+      .card {
+        width:30%;
+        padding-left: 2px;
+      }
+    }
+    @media screen and (max-width: 902px) {
+       body {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+      }
+      .card {
+        width:50%;
+        padding-left: 2px;
+      }
+    }
+
+    
+</style>
+<body>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="style" type="text/css" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<nav class="navbar navbar-expand-lg" style="background-color: #0b6eff; width:100%">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="color: white; font-family: abington, sans-serif; font-size:25px; padding-left:20px">Naznien</a>
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
+      <!-- <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <a class="btn btn-primary" href="{% url 'todolist:logout' %}" role="button" style="display:flex">Logout</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+        
+      </div>
+  </div>
+</nav>
+
+<br>
+<h5 style="padding: 0px 35px">Welcome, {{user}}</h5>
+<br>
+  {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+  <div class="row row-cols-md-4">
+  {% for task in list_task %}
+      {% if user == task.user %}
+      <div class = "col m-4">
+        <div class = "cards">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{task.title}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{task.date}}</h6>
+              <p class="card-text">{{task.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+  {% endfor %}
+  </div>
+<br>
+
+<div class = "container-bottom" style="padding: 0px 35px">
 <h5>Sesi terakhir login: {{ last_login }}</h5>
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
-<button><a href="{% url 'todolist:create-task' %}">Tambah task baru</button>
-
-
+  <a class="btn btn-primary"  href="{% url 'todolist:create-task' %}" role="button">Create Task</a>
+</div>
+</body>
+</html>
 {% endblock content %}

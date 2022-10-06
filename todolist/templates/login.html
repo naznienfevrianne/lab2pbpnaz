@@ -1,35 +1,85 @@
 {% extends 'base.html' %}
-
 {% block meta %}
 <title>Login</title>
 {% endblock meta %}
 
 {% block content %}
+<style>
+    body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  url(https://i.pinimg.com/564x/ff/8a/e8/ff8ae82cff9dc60a559a874fba081ce5.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+  }
 
+  .form {
+    text-align: center;
+  }
+  
+  .login {
+    text-align: center;
+    padding: 10px ;
+  }
+  .containerform {
+    margin: auto;
+    width:100%
+  }
+  .formbox {
+    margin: auto;
+    border: 1px;
+    padding: 10px;
+    width:70%;
+    background-color:#84b5ed;
+    border-radius:8px;
+    color:white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  tr {
+    margin:auto;
+    text-align: center
+  }
+  
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  body {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+</style>
 <div class = "login">
+    <br>
+    <br>
 
-    <h1>Login</h1>
-
+    <h1>Welcome back!</h1>
+    <h5>Please login to continue.</h5>
+    <div class = "containerform">
+    <div class = "formbox">
     <form method="POST" action="">
         {% csrf_token %}
+
         <table>
             <tr>
                 <td>Username: </td>
                 <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
             </tr>
-                    
+                <br>
             <tr>
                 <td>Password: </td>
                 <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
             </tr>
-
             <tr>
                 <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
+                <td><input class="btn login_btn" type="submit" value="Login" style="background-color:#2954E1; color:white"></td>
             </tr>
         </table>
     </form>
-
+    </div>
+    </div>
     {% if messages %}
         <ul>
             {% for message in messages %}
@@ -37,8 +87,8 @@
             {% endfor %}
         </ul>
     {% endif %}     
-        
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
+    <br>
+    Don't have an account yet? <a href="{% url 'todolist:register' %}">Create Account</a>
 
 </div>
 

@@ -1,26 +1,70 @@
 {% extends 'base.html' %}
-
 {% block meta %}
-<title>Registrasi Akun</title>
+<html>
+<title>Sign Up/title>
 {% endblock meta %}
 
-{% block content %}  
+{% block content %}
+<style>
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:  url(https://i.pinimg.com/564x/ff/8a/e8/ff8ae82cff9dc60a559a874fba081ce5.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
 
+  .form {
+    text-align: center;
+  }
+  
+  .login {
+    text-align: center;
+    padding: 10px ;
+  }
+  .registerbox{
+    margin: auto;
+    width: 100%;
+    border: 1px;
+    padding: 10px;
+    background-color:#84b5ed;
+    border-radius:8px;
+    color:white;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .table{
+    text-align: center;
+  }
+  @media screen and (max-width: 800px) {
+       body {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+      }
+  }
+</style>
+  
+<body>
 <div class = "login">
-    
-    <h1>Formulir Registrasi</h1>  
-
+    <br>
+    <br>
+    <h1>Sign Up</h1>  
+        <div class = registerbox>
         <form method="POST" >  
             {% csrf_token %}  
             <table>  
                 {{ form.as_table }}  
                 <tr>  
                     <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
+                    <td><input class="btn login_btn" type="submit" value="Sign Up" style="background-color:#2954E1; color:white"></td>
+                    <td></td>
                 </tr>  
             </table>  
         </form>
 
+        </div>
     {% if messages %}  
         <ul>   
             {% for message in messages %}  
@@ -29,6 +73,7 @@
         </ul>   
     {% endif %}
 
-</div>  
-
+</div> 
+</body> 
+</html>
 {% endblock content %}
