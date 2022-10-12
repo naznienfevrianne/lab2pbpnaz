@@ -5,7 +5,7 @@ from django.utils.timezone import now
 # Create your models here.
 
 class TaskToDoList(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user', null=True);
+    user = models.ForeignKey(User, on_delete=models.CASCADE);
     date = models.DateField(default=datetime.date.today())
     title = models.CharField(max_length=100)
     description = models.TextField();
