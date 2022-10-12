@@ -43,7 +43,7 @@
         e.preventDefault();
         $.ajax({
             type:"POST", 
-            url:"{% url 'todolist:add-task' %}",
+            url:"{% url 'todolist:add_task' %}",
             data:{
                 title:$("#title").val(), 
                 description:$("#description").val(), 
@@ -172,7 +172,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Creating new task</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Creating new Task</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
