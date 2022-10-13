@@ -20,5 +20,6 @@ Menggunakan button dengan modal dari bootstrap. Di dalam modal, saya memodifikas
 2. Membuat view baru untuk menambahkan task baru ke dalam database
 Membuat views baru bernama add_task dengan login_required dan csrf_exempt. Mengambil input title dan description dengan method POST dan membuat objek TaskToDoList baru, kemudian save objek TaskToDoList baru tersebut. 
 3. Buatlah path /todolist/add yang mengarah ke view yang baru kamu buat.
+Mengimport fungsi yang sebelumnya sudah dibuat ke urls.py, kemudian membuat path 'add/' yang mengarah ke fungsi yang sudah diimport
 4. Menghubungkan form yang telah dibuat di modal ke path /todolist/add
-5. Menutup modal setelah penambahan task berhasil dilakukan
+Ketika button submit di form pada modal diklik, maka akan menjalankan fungsi creatingTable() dan melakukan AJAX Post dengan url yang mengacu ke todolist/add.
