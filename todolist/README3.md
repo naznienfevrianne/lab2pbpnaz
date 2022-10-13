@@ -1,4 +1,5 @@
 README Tugas 6
+Link: https://tugas2pbpnaz.herokuapp.com/todolist/todolist_ajax/
 ## Jelaskan perbedaan antara asynchronous programming dan synchronous programming
 Asynchronous programming adalah approach programming yang tidak terikat pada protocol I/O. Secara singkatnya, asynchronous programming emlakukan pekerjaannya tanpa harus terikat dengan proses lain, sehingga proses dapat berjalan secara independent. Sementara itu, pada synchronous programming sebuah proses yang berjalan akan ditunggu sampai selesai tereksekusi sebelum berpindah ke proses selanjutnya.
 ## Jelaskan maksud dari paradigma Event-Driven Programming dan sebutkan salah satu contoh penerapannya pada tugas ini
