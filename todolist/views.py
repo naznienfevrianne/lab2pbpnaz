@@ -32,9 +32,8 @@ def todolist_json(request):
 @login_required(login_url='/todolist/login/')
 def todolist_ajax(request): 
     context = {
-    'nama': 'Shafa',
     'last_login': request.COOKIES['last_login'],
-}
+    }
     return render(request, 'todolist_ajax.html', context)
 
 @login_required(login_url="/wishlist/login/")
